@@ -1,0 +1,205 @@
+{
+  "sections": [
+    {
+      "title": "Overall",
+      "items": [
+        {
+          "id": "ea_email",
+          "label": "Clear Sloan's email",
+          "type": "check"
+        },
+        {
+          "id": "ea_rent_payroll",
+          "label": "Double check rent and payroll",
+          "type": "check"
+        },
+        {
+          "id": "ea_social",
+          "label": "Week of social media posts",
+          "type": "check"
+        },
+        {
+          "id": "ea_call",
+          "label": "Call with Sloan after manager check-ins",
+          "type": "check"
+        }
+      ]
+    },
+    {
+      "title": "Deleta",
+      "items": [
+        {
+          "id": "de_payroll",
+          "label": "Payroll",
+          "type": "check"
+        },
+        {
+          "id": "de_contractors",
+          "label": "Payroll for Contractors",
+          "type": "check"
+        },
+        {
+          "id": "de_bizdoc",
+          "label": "Business Doc",
+          "type": "check"
+        },
+        {
+          "id": "de_salestax",
+          "label": "Sales tax",
+          "type": "check"
+        },
+        {
+          "id": "de_partywirks",
+          "label": "Monthly partywirks contacts",
+          "type": "check"
+        },
+        {
+          "id": "de_checklist",
+          "label": "Manager's Checklist",
+          "type": "check",
+          "hint": "Reviewed on the dashboard"
+        },
+        {
+          "id": "de_checkin",
+          "label": "Call/Text check in with manager to review checklist",
+          "type": "check"
+        }
+      ]
+    },
+    {
+      "title": "Glow Games",
+      "items": [
+        {
+          "id": "gg_payroll",
+          "label": "Payroll",
+          "type": "check"
+        },
+        {
+          "id": "gg_bizdoc",
+          "label": "Business Doc",
+          "type": "check"
+        },
+        {
+          "id": "gg_salestax",
+          "label": "Sales tax",
+          "type": "check"
+        },
+        {
+          "id": "gg_checklist",
+          "label": "Manager's Checklist",
+          "type": "check"
+        },
+        {
+          "id": "gg_checkin",
+          "label": "Call/Text check in with manager to review checklist",
+          "type": "check"
+        }
+      ]
+    },
+    {
+      "title": "Get Out Games",
+      "items": [
+        {
+          "id": "go_payroll",
+          "label": "Submit Payroll",
+          "type": "check"
+        },
+        {
+          "id": "go_checklist",
+          "label": "Manager's Checklist",
+          "type": "check"
+        },
+        {
+          "id": "go_checkin",
+          "label": "Call/Text check in with manager to review checklist",
+          "type": "check"
+        }
+      ]
+    },
+    {
+      "title": "Hatchets",
+      "items": [
+        {
+          "id": "hh_rent",
+          "label": "Rent (3 locations)",
+          "type": "check"
+        },
+        {
+          "id": "hh_payroll",
+          "label": "Submit Payroll",
+          "type": "check"
+        },
+        {
+          "id": "hh_provo_checklist",
+          "label": "Provo Manager's Checklist",
+          "type": "check"
+        },
+        {
+          "id": "hh_poc_checklist",
+          "label": "Pocatello Manager's Checklist",
+          "type": "check"
+        },
+        {
+          "id": "hh_spo_checklist",
+          "label": "Spokane Manager's Checklist",
+          "type": "check"
+        },
+        {
+          "id": "hh_provo_checkin",
+          "label": "Call/Text check in with Provo manager to review checklist",
+          "type": "check"
+        },
+        {
+          "id": "hh_poc_checkin",
+          "label": "Call/Text check in with Pocatello manager to review checklist",
+          "type": "check"
+        },
+        {
+          "id": "hh_spo_checkin",
+          "label": "Call/Text check in with Spokane manager to review checklist",
+          "type": "check"
+        }
+      ]
+    },
+    {
+      "title": "Brass City",
+      "items": [
+        {
+          "id": "bc_payroll",
+          "label": "Payroll",
+          "type": "check"
+        },
+        {
+          "id": "bc_myconnect",
+          "label": "myconneCT",
+          "type": "check"
+        },
+        {
+          "id": "bc_checklist",
+          "label": "Manager's Checklist",
+          "type": "check"
+        },
+        {
+          "id": "bc_checkin",
+          "label": "Call/Text check in with manager to review checklist",
+          "type": "check"
+        }
+      ]
+    },
+    {
+      "title": "For Sloan",
+      "items": [
+        {
+          "id": "ea_escalate",
+          "label": "Anything from the manager check-ins that needs Sloan's attention this week?",
+          "type": "text"
+        },
+        {
+          "id": "ea_blocked",
+          "label": "What's stuck or waiting on Sloan?",
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}

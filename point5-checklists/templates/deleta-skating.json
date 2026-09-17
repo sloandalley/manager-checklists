@@ -1,0 +1,430 @@
+{
+  "sections": [
+    {
+      "title": "First Impression and Exterior",
+      "items": [
+        {
+          "label": "Parking lot is clean and free of debris, garbage, weeds or hazards",
+          "type": "pass",
+          "id": "s1_1"
+        },
+        {
+          "label": "Exterior lights, signage, and entry area are in good condition",
+          "type": "pass",
+          "id": "s1_2"
+        },
+        {
+          "label": "Windows, doors, and front entry look clean and inviting",
+          "type": "pass",
+          "id": "s1_3"
+        },
+        {
+          "label": "Promotional signs, banners, and posted information are current",
+          "type": "pass",
+          "id": "s1_4"
+        }
+      ]
+    },
+    {
+      "title": "Lobby and Front Counter",
+      "items": [
+        {
+          "label": "Front desk is organized and free of clutter",
+          "type": "pass",
+          "id": "s2_1"
+        },
+        {
+          "label": "Prices, waivers, policies, and party info are easy to find",
+          "type": "pass",
+          "id": "s2_2"
+        },
+        {
+          "label": "Guest greeting is prompt and friendly",
+          "type": "pass",
+          "id": "s2_3"
+        },
+        {
+          "label": "POS systems and check-in flow are working smoothly",
+          "type": "pass",
+          "id": "s2_4"
+        }
+      ]
+    },
+    {
+      "title": "Cleanliness",
+      "items": [
+        {
+          "label": "Rink floor, arcade, snack area, seating, and party rooms are clean",
+          "type": "pass",
+          "id": "s3_1"
+        },
+        {
+          "label": "Trash cans are emptied and tables are wiped down",
+          "type": "pass",
+          "id": "s3_2"
+        },
+        {
+          "label": "Restrooms are clean, stocked, and odor free",
+          "type": "pass",
+          "id": "s3_3"
+        },
+        {
+          "label": "Back-of-house and employee areas are organized",
+          "type": "pass",
+          "id": "s3_4"
+        }
+      ]
+    },
+    {
+      "title": "Skating Floor and Guest Experience",
+      "items": [
+        {
+          "label": "Skating surface is clean and safe",
+          "type": "pass",
+          "id": "s4_1"
+        },
+        {
+          "label": "Lighting, music, sound quality, and announcements feel high energy",
+          "type": "pass",
+          "id": "s4_2"
+        },
+        {
+          "label": "Floor guards/staff are visible and rules are enforced",
+          "type": "pass",
+          "id": "s4_3"
+        },
+        {
+          "label": "Guest experience feels fun, smooth, and worth repeating",
+          "type": "pass",
+          "id": "s4_4"
+        }
+      ]
+    },
+    {
+      "title": "Rental Skates and Equipment",
+      "items": [
+        {
+          "label": "Skates are organized, clean, and available in needed sizes",
+          "type": "pass",
+          "id": "s5_1"
+        },
+        {
+          "label": "Broken or worn skates are removed from use",
+          "type": "pass",
+          "id": "s5_2"
+        },
+        {
+          "label": "Wheels, laces, straps, and brakes are in good condition",
+          "type": "pass",
+          "id": "s5_3"
+        },
+        {
+          "label": "Fitting area, benches, and return process work well",
+          "type": "pass",
+          "id": "s5_4"
+        }
+      ]
+    },
+    {
+      "title": "Safety and Risk Management",
+      "items": [
+        {
+          "label": "Emergency exits and walkways are clear",
+          "type": "pass",
+          "id": "s6_1"
+        },
+        {
+          "label": "First-aid kit, extinguishers, and cameras are ready and accessible",
+          "type": "pass",
+          "id": "s6_2"
+        },
+        {
+          "label": "Incident log is maintained and reviewed",
+          "type": "pass",
+          "id": "s6_3"
+        },
+        {
+          "label": "Unsafe behavior is addressed quickly and consistently",
+          "type": "pass",
+          "id": "s6_4"
+        }
+      ]
+    },
+    {
+      "title": "Customer Service and Staff Performance",
+      "items": [
+        {
+          "label": "Staff are friendly, engaged, visible, and professional",
+          "type": "pass",
+          "id": "s7_1"
+        },
+        {
+          "label": "Managers are actively managing, not just present",
+          "type": "pass",
+          "id": "s7_2"
+        },
+        {
+          "label": "Uniform/dress standards and punctuality expectations are met",
+          "type": "pass",
+          "id": "s7_3"
+        },
+        {
+          "label": "Issues are resolved quickly without guest frustration",
+          "type": "pass",
+          "id": "s7_4"
+        }
+      ]
+    },
+    {
+      "title": "Food, Beverage, Arcade, and Revenue Drivers",
+      "items": [
+        {
+          "label": "Snack bar is clean, stocked, and following food-safety basics",
+          "type": "pass",
+          "id": "s8_1"
+        },
+        {
+          "label": "Top-selling food and beverage items are available",
+          "type": "pass",
+          "id": "s8_2"
+        },
+        {
+          "label": "Arcade/games are functioning and appealing. Note any not working",
+          "type": "pass",
+          "id": "s8_3"
+        },
+        {
+          "label": "Upselling of parties, concessions, or add-ons is happening",
+          "type": "pass",
+          "id": "s8_4"
+        }
+      ]
+    },
+    {
+      "title": "Parties, Maintenance, and Marketing",
+      "items": [
+        {
+          "label": "Party rooms and group areas are ready for guests",
+          "type": "pass",
+          "id": "s9_1"
+        },
+        {
+          "label": "Facility maintenance issues are identified and prioritized",
+          "type": "pass",
+          "id": "s9_2"
+        },
+        {
+          "label": "Website, Google listing, and social media are current",
+          "type": "pass",
+          "id": "s9_3"
+        },
+        {
+          "label": "In-store promotions and upcoming events are clearly visible",
+          "type": "pass",
+          "id": "s9_4"
+        },
+        {
+          "label": "Every group is given an opportunity for a social media game",
+          "type": "pass",
+          "id": "s9_5"
+        },
+        {
+          "label": "Every video is posted (ideally with 48hours, 1 week maximum)",
+          "type": "check",
+          "id": "s9_6"
+        }
+      ]
+    },
+    {
+      "title": "Manager Operations and Weekly Execution",
+      "items": [
+        {
+          "label": "Look through last week’s checklists and note anything that did not get done",
+          "type": "check",
+          "id": "s10_1"
+        },
+        {
+          "label": "Talk to employees who did not finish checklists and issue strikes if needed",
+          "type": "check",
+          "id": "s10_2"
+        },
+        {
+          "label": "Check up on new employees and schedule training as needed",
+          "type": "check",
+          "id": "s10_3"
+        },
+        {
+          "label": "Change marquee",
+          "type": "check",
+          "id": "s10_4"
+        },
+        {
+          "label": "Take inventory",
+          "type": "check",
+          "id": "s10_5"
+        },
+        {
+          "label": "Order inventory",
+          "type": "check",
+          "id": "s10_6"
+        },
+        {
+          "label": "Make schedule for next week",
+          "type": "check",
+          "id": "s10_7"
+        },
+        {
+          "label": "Review upcoming bookings: private parties, public parties, and field trips; verify coverage",
+          "type": "check",
+          "id": "s10_8"
+        },
+        {
+          "label": "Refill all arcade games and crane machines",
+          "type": "check",
+          "id": "s10_9"
+        },
+        {
+          "label": "Text Brody if there are broken games",
+          "type": "check",
+          "id": "s10_10"
+        },
+        {
+          "label": "Check email and flag anything that needs follow-up",
+          "type": "check",
+          "id": "s10_11"
+        },
+        {
+          "label": "Check voicemails",
+          "type": "check",
+          "id": "s10_12"
+        },
+        {
+          "label": "Plan upcoming theme nights if needed",
+          "type": "check",
+          "id": "s10_13"
+        },
+        {
+          "label": "Recognize one employee shoutout in Square Team",
+          "type": "check",
+          "id": "s10_14"
+        },
+        {
+          "label": "Print out parties for the week and order pizzas",
+          "type": "check",
+          "id": "s10_15"
+        },
+        {
+          "label": "Finalize the After School Skate",
+          "type": "check",
+          "id": "s10_16"
+        },
+        {
+          "label": "Update PartyWirks with special hours and events",
+          "type": "check",
+          "id": "s10_17"
+        },
+        {
+          "label": "Post upcoming Facebook events in the feed section for Deleta",
+          "type": "check",
+          "id": "s10_18"
+        },
+        {
+          "label": "Create and send the regular Monday marketing email in Square",
+          "type": "check",
+          "id": "s10_19"
+        },
+        {
+          "label": "Schedule a second marketing email for the morning of that week’s event, if applicable",
+          "type": "check",
+          "id": "s10_20"
+        },
+        {
+          "label": "Add holiday hours in Google Business and Apple Maps",
+          "type": "check",
+          "id": "s10_21"
+        },
+        {
+          "label": "Empty kiosk of cash and refill cards",
+          "type": "check",
+          "id": "s10_22"
+        },
+        {
+          "label": "Refill quarter machine and empty cash",
+          "type": "check",
+          "id": "s10_23"
+        },
+        {
+          "label": "Make cash deposit",
+          "type": "check",
+          "id": "s10_24"
+        },
+        {
+          "label": "Log kiosk sales in Square",
+          "type": "check",
+          "id": "s10_25"
+        },
+        {
+          "label": "Organize redemption counter and place an order if needed",
+          "type": "check",
+          "id": "s10_26"
+        },
+        {
+          "label": "Take lost and found items to the thrift store of choice",
+          "type": "check",
+          "id": "s10_27"
+        },
+        {
+          "label": "Schedule shift leader meeting",
+          "type": "check",
+          "id": "s10_28"
+        },
+        {
+          "label": "Fill out the extra task papers and place them at each station",
+          "type": "check",
+          "id": "s10_29"
+        },
+        {
+          "label": "Send invoice to Roller Derby Team",
+          "type": "check",
+          "id": "s10_30"
+        },
+        {
+          "label": "Send check to Papa Murphy’s",
+          "type": "check",
+          "id": "s10_31"
+        }
+      ]
+    },
+    {
+      "title": "Weekly summary",
+      "items": [
+        {
+          "label": "Top 3 strengths",
+          "type": "text",
+          "id": "s11_1"
+        },
+        {
+          "label": "Top 3 issues hurting performance",
+          "type": "text",
+          "id": "s11_2"
+        },
+        {
+          "label": "Would a first-time guest likely return? Why or why not?",
+          "type": "text",
+          "id": "s11_3"
+        }
+      ]
+    },
+    {
+      "title": "Action items",
+      "items": [
+        {
+          "id": "actions",
+          "type": "text",
+          "label": "Action items for next week — issue, owner, due date",
+          "hint": "One per line"
+        }
+      ]
+    }
+  ]
+}

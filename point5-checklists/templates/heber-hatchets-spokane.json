@@ -1,0 +1,324 @@
+{
+  "sections": [
+    {
+      "title": "Exterior and Arrival Experience",
+      "items": [
+        {
+          "label": "Parking lot, sidewalks, and entry area are clean and free of hazards",
+          "type": "pass",
+          "id": "s1_1"
+        },
+        {
+          "label": "Exterior signage, lights, and windows are clean and working",
+          "type": "pass",
+          "id": "s1_2"
+        },
+        {
+          "label": "Hours, promotions, and event signage are current and easy to read",
+          "type": "pass",
+          "id": "s1_3"
+        },
+        {
+          "label": "Front entrance gives a strong first impression",
+          "type": "pass",
+          "id": "s1_4"
+        }
+      ]
+    },
+    {
+      "title": "Front Desk and Guest Flow",
+      "items": [
+        {
+          "label": "Guests are greeted quickly and confidently",
+          "type": "pass",
+          "id": "s2_1"
+        },
+        {
+          "label": "Wait times, waivers, and check-in flow are smooth",
+          "type": "pass",
+          "id": "s2_2"
+        },
+        {
+          "label": "Pricing, rules, and party information are clearly communicated",
+          "type": "pass",
+          "id": "s2_3"
+        },
+        {
+          "label": "Phone, voicemail, and guest messages are answered promptly",
+          "type": "pass",
+          "id": "s2_4"
+        },
+        {
+          "label": "Staff confidently explain bay rules, party flow, and add-ons",
+          "type": "pass",
+          "id": "s2_5"
+        }
+      ]
+    },
+    {
+      "title": "Cleanliness and Facility Presentation",
+      "items": [
+        {
+          "label": "Lobby, seating, restrooms, and party spaces are clean and stocked",
+          "type": "pass",
+          "id": "s3_1"
+        },
+        {
+          "label": "Throwing bays, tables, floors, and common areas are clean and organized",
+          "type": "pass",
+          "id": "s3_2"
+        },
+        {
+          "label": "Trash is controlled and back-of-house areas are reasonably organized",
+          "type": "pass",
+          "id": "s3_3"
+        },
+        {
+          "label": "Music, lighting, and atmosphere feel energetic and on-brand",
+          "type": "pass",
+          "id": "s3_4"
+        }
+      ]
+    },
+    {
+      "title": "Axe Throwing Experience",
+      "items": [
+        {
+          "label": "Targets are in good condition and changed when needed",
+          "type": "pass",
+          "id": "s4_1"
+        },
+        {
+          "label": "Axes are safe, clean, and stored properly",
+          "type": "pass",
+          "id": "s4_2"
+        },
+        {
+          "label": "Lanes, barriers, and safety lines are clearly marked",
+          "type": "pass",
+          "id": "s4_3"
+        },
+        {
+          "label": "Coaches enforce safety rules consistently",
+          "type": "pass",
+          "id": "s4_4"
+        },
+        {
+          "label": "Guests receive clear instruction before throwing begins",
+          "type": "pass",
+          "id": "s4_5"
+        },
+        {
+          "label": "Coaches stay engaged and help groups have fun, not just stay safe",
+          "type": "pass",
+          "id": "s4_6"
+        },
+        {
+          "label": "Any broken or worn equipment is removed immediately",
+          "type": "pass",
+          "id": "s4_7"
+        }
+      ]
+    },
+    {
+      "title": "Parties, Bookings, and Group Experience",
+      "items": [
+        {
+          "label": "Upcoming parties and bookings are reviewed and properly staffed",
+          "type": "pass",
+          "id": "s5_1"
+        },
+        {
+          "label": "Party spaces are ready before guests arrive",
+          "type": "pass",
+          "id": "s5_2"
+        },
+        {
+          "label": "Food, drinks, and party supplies are prepared when applicable",
+          "type": "pass",
+          "id": "s5_3"
+        },
+        {
+          "label": "Hosts check in on parties during the visit",
+          "type": "pass",
+          "id": "s5_4"
+        },
+        {
+          "label": "Large groups move through check-in and lane assignment smoothly",
+          "type": "pass",
+          "id": "s5_5"
+        }
+      ]
+    },
+    {
+      "title": "Safety and Risk Management",
+      "items": [
+        {
+          "label": "Incident log is up to date and any issues are documented",
+          "type": "pass",
+          "id": "s6_1"
+        },
+        {
+          "label": "Emergency exits, extinguishers, and first-aid supplies are accessible",
+          "type": "pass",
+          "id": "s6_2"
+        },
+        {
+          "label": "Cameras and key security measures are functioning",
+          "type": "pass",
+          "id": "s6_3"
+        },
+        {
+          "label": "Staff know escalation procedures for injuries, intoxication, or unsafe behavior",
+          "type": "pass",
+          "id": "s6_4"
+        },
+        {
+          "label": "Floor hazards, damaged surfaces, or other risks are addressed quickly",
+          "type": "pass",
+          "id": "s6_5"
+        }
+      ]
+    },
+    {
+      "title": "Staff Training and Accountability",
+      "items": [
+        {
+          "label": "Shifts are covered and staffing matches expected traffic",
+          "type": "pass",
+          "id": "s7_1"
+        },
+        {
+          "label": "Staff know current promotions, hours, and party procedures",
+          "type": "pass",
+          "id": "s7_2"
+        },
+        {
+          "label": "New employees are trained and coached appropriately",
+          "type": "pass",
+          "id": "s7_3"
+        },
+        {
+          "label": "Managers address staff performance issues quickly and professionally",
+          "type": "pass",
+          "id": "s7_4"
+        },
+        {
+          "label": "Recognition and accountability are consistent",
+          "type": "pass",
+          "id": "s7_5"
+        }
+      ]
+    },
+    {
+      "title": "Revenue, Inventory, and POS Control",
+      "items": [
+        {
+          "label": "POS, waiver, and payment systems are working properly",
+          "type": "pass",
+          "id": "s8_1"
+        },
+        {
+          "label": "Cash handling, deposits, and discrepancies are reviewed weekly",
+          "type": "pass",
+          "id": "s8_2"
+        },
+        {
+          "label": "Merchandise, snacks, and key supplies are stocked appropriately",
+          "type": "pass",
+          "id": "s8_3"
+        },
+        {
+          "label": "Broken equipment or facility issues are reported and tracked",
+          "type": "pass",
+          "id": "s8_4"
+        },
+        {
+          "label": "Refunds, discounts, and comps are being used appropriately",
+          "type": "pass",
+          "id": "s8_5"
+        }
+      ]
+    },
+    {
+      "title": "Marketing and Review Capture",
+      "items": [
+        {
+          "label": "3 social videos/day posted this week",
+          "type": "pass",
+          "id": "s9_1"
+        },
+        {
+          "label": "Current promotions and events are posted clearly in-store and online",
+          "type": "pass",
+          "id": "s9_2"
+        },
+        {
+          "label": "Google listing, hours, and special events are accurate",
+          "type": "pass",
+          "id": "s9_3"
+        },
+        {
+          "label": "Staff invite strong guest groups to leave reviews or share content",
+          "type": "pass",
+          "id": "s9_4"
+        }
+      ]
+    },
+    {
+      "title": "Weekly Manager Follow-Through",
+      "items": [
+        {
+          "label": "Schedule is built far enough ahead and communicated clearly",
+          "type": "pass",
+          "id": "s10_1"
+        },
+        {
+          "label": "Important emails, voicemails, and messages are handled daily",
+          "type": "pass",
+          "id": "s10_2"
+        },
+        {
+          "label": "Manager walks the facility and corrects missed tasks during the week",
+          "type": "pass",
+          "id": "s10_3"
+        },
+        {
+          "label": "Top maintenance needs and supply orders are identified and acted on",
+          "type": "pass",
+          "id": "s10_4"
+        },
+        {
+          "label": "Top 3 issues from this week are documented with an owner and next step",
+          "type": "pass",
+          "id": "s10_5"
+        }
+      ]
+    },
+    {
+      "title": "Weekly summary",
+      "items": [
+        {
+          "label": "Biggest customer experience win this week",
+          "type": "text",
+          "id": "s11_1"
+        },
+        {
+          "label": "Biggest issue hurting guest experience this week",
+          "type": "text",
+          "id": "s11_2"
+        },
+        {
+          "label": "Top 3 fixes for next week",
+          "type": "text",
+          "id": "s11_3"
+        },
+        {
+          "label": "Manager notes / follow-up",
+          "type": "text",
+          "id": "s11_4"
+        }
+      ]
+    }
+  ]
+}

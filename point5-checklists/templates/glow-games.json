@@ -1,0 +1,315 @@
+{
+  "sections": [
+    {
+      "title": "First Impression and Exterior",
+      "items": [
+        {
+          "label": "Parking lot, sidewalks, entry, and exterior signage are clean, safe, and guest-ready",
+          "type": "pass",
+          "id": "s1_1"
+        },
+        {
+          "label": "Hours, pricing, promotions, and any special notices are current and easy to find",
+          "type": "pass",
+          "id": "s1_2"
+        },
+        {
+          "label": "Entry experience feels welcoming, organized, and consistent with the Glow Games brand",
+          "type": "pass",
+          "id": "s1_3"
+        },
+        {
+          "label": "Any visible exterior trash, lighting issues, or hazards are addressed quickly",
+          "type": "pass",
+          "id": "s1_4"
+        }
+      ]
+    },
+    {
+      "title": "Front Counter, Communication, and Guest Readiness",
+      "items": [
+        {
+          "label": "Voicemails are checked daily and responded to in a timely manner",
+          "type": "pass",
+          "id": "s2_1"
+        },
+        {
+          "label": "glowgamestf email and glowgamesparty email are checked daily",
+          "type": "pass",
+          "id": "s2_2"
+        },
+        {
+          "label": "Mail is opened, processed, and anything important is sent to Sloan",
+          "type": "pass",
+          "id": "s2_3"
+        },
+        {
+          "label": "Front desk team understands current hours, pricing, promotions, and party procedures",
+          "type": "pass",
+          "id": "s2_4"
+        },
+        {
+          "label": "Staff handle guest questions, waivers, check-in, and phone communication professionally",
+          "type": "pass",
+          "id": "s2_5"
+        }
+      ]
+    },
+    {
+      "title": "Cleanliness and Facility Presentation",
+      "items": [
+        {
+          "label": "Lobby, seating, party areas, mini golf, laser tag, arcade, and restrooms are clean and organized",
+          "type": "pass",
+          "id": "s3_1"
+        },
+        {
+          "label": "Business is consistently guest-ready, not just cleaned up at closing",
+          "type": "pass",
+          "id": "s3_2"
+        },
+        {
+          "label": "Prize counter is neat, stocked, and visually appealing",
+          "type": "pass",
+          "id": "s3_3"
+        },
+        {
+          "label": "Soda, party supplies, and front-of-house supplies are stocked and accessible",
+          "type": "pass",
+          "id": "s3_4"
+        }
+      ]
+    },
+    {
+      "title": "Mini Golf Experience",
+      "items": [
+        {
+          "label": "Mini golf course is clean, well-lit, and free of obvious hazards or broken obstacles",
+          "type": "pass",
+          "id": "s4_1"
+        },
+        {
+          "label": "Putters, balls, scorecards, pencils, and course supplies are available and organized",
+          "type": "pass",
+          "id": "s4_2"
+        },
+        {
+          "label": "Course flow is smooth and staff help resolve slowdowns or guest confusion quickly",
+          "type": "pass",
+          "id": "s4_3"
+        },
+        {
+          "label": "Mini golf presentation feels fun, maintained, and worth repeating",
+          "type": "pass",
+          "id": "s4_4"
+        }
+      ]
+    },
+    {
+      "title": "Laser Tag Experience",
+      "items": [
+        {
+          "label": "Laser tag arena is clean, safe, and fully ready for play",
+          "type": "pass",
+          "id": "s5_1"
+        },
+        {
+          "label": "Laser tag vests and equipment are working, charged, and fixed quickly when issues arise. Make note of any that are not working.",
+          "type": "pass",
+          "id": "s5_2"
+        },
+        {
+          "label": "Game throughput, safety briefing, and reset process run smoothly",
+          "type": "pass",
+          "id": "s5_3"
+        },
+        {
+          "label": "Staff confidently explain rules, start games on time, and keep the experience high energy",
+          "type": "pass",
+          "id": "s5_4"
+        }
+      ]
+    },
+    {
+      "title": "Arcade and Redemption",
+      "items": [
+        {
+          "label": "Arcade games are working or actively being fixed with issues clearly tracked",
+          "type": "pass",
+          "id": "s6_1"
+        },
+        {
+          "label": "Broken games are addressed quickly and do not sit unattended without follow-up",
+          "type": "pass",
+          "id": "s6_2"
+        },
+        {
+          "label": "Token/cash machine is functioning and token machine sales are logged into Square weekly",
+          "type": "pass",
+          "id": "s6_3"
+        },
+        {
+          "label": "Redemption area is organized, stocked, and supports upsell and repeat play",
+          "type": "pass",
+          "id": "s6_4"
+        }
+      ]
+    },
+    {
+      "title": "Parties, Bookings, and Group Execution",
+      "items": [
+        {
+          "label": "Upcoming parties for the week are reviewed and double-checked",
+          "type": "pass",
+          "id": "s7_1"
+        },
+        {
+          "label": "Pizzas, sodas, tableware, and party supplies are ordered correctly and on time",
+          "type": "pass",
+          "id": "s7_2"
+        },
+        {
+          "label": "Party staffing is sufficient for booked events and busy periods",
+          "type": "pass",
+          "id": "s7_3"
+        },
+        {
+          "label": "Party host execution, communication, and setup support a smooth guest experience",
+          "type": "pass",
+          "id": "s7_4"
+        }
+      ]
+    },
+    {
+      "title": "Staff Training, Scheduling, and Accountability",
+      "items": [
+        {
+          "label": "Employees are scheduled at least two weeks out",
+          "type": "pass",
+          "id": "s8_1"
+        },
+        {
+          "label": "Staff availability is reviewed before posting the schedule",
+          "type": "pass",
+          "id": "s8_2"
+        },
+        {
+          "label": "All shifts are covered and adjusted for holidays, school breaks, promotions, and events",
+          "type": "pass",
+          "id": "s8_3"
+        },
+        {
+          "label": "New employees are trained for their assigned responsibilities",
+          "type": "pass",
+          "id": "s8_4"
+        },
+        {
+          "label": "Staff issues are corrected quickly, documented when needed, and communicated professionally",
+          "type": "pass",
+          "id": "s8_5"
+        },
+        {
+          "label": "Schedule changes are communicated clearly and parties/busy times are staffed appropriately",
+          "type": "pass",
+          "id": "s8_6"
+        }
+      ]
+    },
+    {
+      "title": "Promotions, Social Media, and Guest Updates",
+      "items": [
+        {
+          "label": "Staff know about current promotions and can explain them to guests",
+          "type": "pass",
+          "id": "s9_1"
+        },
+        {
+          "label": "Updates about new hours and promotions are posted when needed",
+          "type": "pass",
+          "id": "s9_2"
+        },
+        {
+          "label": "Donation requests are handled reasonably and unusual requests are sent to Sloan",
+          "type": "pass",
+          "id": "s9_3"
+        },
+        {
+          "label": "Minimum 3 social videos per day were posted this week",
+          "type": "pass",
+          "id": "s9_4"
+        },
+        {
+          "label": "Marketing and guest communication support current events, offers, and traffic goals",
+          "type": "pass",
+          "id": "s9_5"
+        }
+      ]
+    },
+    {
+      "title": "Cash Handling, Reporting, and Manager Follow-Through",
+      "items": [
+        {
+          "label": "Weekly deposit to Wells Fargo is completed accurately and on time",
+          "type": "pass",
+          "id": "s10_1"
+        },
+        {
+          "label": "Any cash discrepancies are identified and reported to Sloan",
+          "type": "pass",
+          "id": "s10_2"
+        },
+        {
+          "label": "Important emails, legal notices, bills, tax notices, bank notices, insurance notices, or official documents are escalated promptly",
+          "type": "pass",
+          "id": "s10_3"
+        },
+        {
+          "label": "Manager handles routine issues independently and forwards unresolved issues to Sloan as needed",
+          "type": "pass",
+          "id": "s10_4"
+        },
+        {
+          "label": "Top weekly priorities are being completed consistently, not pushed off or forgotten",
+          "type": "pass",
+          "id": "s10_5"
+        }
+      ]
+    },
+    {
+      "title": "Weekly summary",
+      "items": [
+        {
+          "label": "Top 3 wins from this week",
+          "type": "text",
+          "id": "s11_1"
+        },
+        {
+          "label": "Top 3 issues hurting guest experience or revenue",
+          "type": "text",
+          "id": "s11_2"
+        },
+        {
+          "label": "Follow-up owner(s)",
+          "type": "text",
+          "id": "s11_3"
+        },
+        {
+          "label": "Deadline(s)",
+          "type": "text",
+          "id": "s11_4"
+        }
+      ]
+    },
+    {
+      "title": "Action items",
+      "items": [
+        {
+          "id": "actions",
+          "type": "text",
+          "label": "Action items for next week — issue, owner, due date",
+          "hint": "One per line"
+        }
+      ]
+    }
+  ]
+}

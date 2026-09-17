@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Manager Checklists — Owner Dashboard</title>
+<style>
+  :root { --bg:#f6f6f7; --card:#fff; --ink:#18181b; --muted:#6b7280; --line:#e5e7eb; --blue:#1d4ed8; --green:#15803d; --amber:#b45309; --red:#b91c1c; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.5 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  .wrap { max-width:1100px; margin:0 auto; padding:20px 16px 60px; }
+  h1 { font-size:22px; margin:0; }
+  .top { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:16px; }
+  .weeknav { display:flex; align-items:center; gap:8px; }
+  button { font:inherit; cursor:pointer; }
+  .b { background:#fff; border:1px solid var(--line); border-radius:8px; padding:7px 12px; }
+  .b.p { background:var(--blue); color:#fff; border-color:var(--blue); }
+  .b.danger { color:var(--red); }
+  .b:disabled { opacity:.5; cursor:default; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:12px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; cursor:pointer; border-left:5px solid #d1d5db; }
+  .card.green { border-left-color:var(--green); } .card.yellow { border-left-color:#f59e0b; } .card.red { border-left-color:var(--red); }
+  .card.missing { border-left-color:#d1d5db; opacity:.85; }
+  .card h3 { margin:0 0 2px; font-size:16px; }
+  .card .loc { color:var(--muted); font-size:13px; }
+  .card .st { margin-top:8px; font-size:13px; }
+  .pill { display:inline-block; padding:2px 8px; border-radius:999px; font-size:12px; font-weight:600; }
+  .pill.sub { background:#dcfce7; color:#166534; } .pill.open { background:#fef3c7; color:#92400e; } .pill.none { background:#f3f4f6; color:#6b7280; }
+  .headline { margin-top:8px; font-size:14px; }
+  .flagcount { color:var(--red); font-weight:700; font-size:13px; }
+  .summary-list { margin-top:24px; }
+  .biz { background:var(--card); border:1px solid var(--line); border-radius:12px; margin:12px 0; overflow:hidden; }
+  .biz .hd { display:flex; justify-content:space-between; align-items:center; padding:14px 18px; gap:12px; flex-wrap:wrap; }
+  .biz .hd h2 { margin:0; font-size:18px; }
+  .biz .body { padding:0 18px 18px; }
+  .flag { border-radius:8px; padding:10px 12px; margin:8px 0; border:1px solid var(--line); }
+  .flag.urgent { background:#fef2f2; border-color:#fecaca; } .flag.soon { background:#fffbeb; border-color:#fde68a; } .flag.fyi { background:#f9fafb; }
+  .flag b { display:block; }
+  .tag { font-size:11px; text-transform:uppercase; letter-spacing:.05em; font-weight:700; }
+  .urgent .tag { color:var(--red); } .soon .tag { color:var(--amber); } .fyi .tag { color:var(--muted); }
+  .muted { color:var(--muted); }
+  details { margin-top:12px; }
+  summary { cursor:pointer; color:var(--blue); }
+  .resp { font-size:14px; }
+  .resp h4 { margin:12px 0 4px; font-size:13px; text-transform:uppercase; letter-spacing:.04em; color:#374151; }
+  .resp .it { padding:4px 0; border-bottom:1px dashed #eee; }
+  .resp .no { color:var(--red); } .resp .ok { color:var(--green); }
+  .resp .note { color:#374151; font-style:italic; padding-left:24px; }
+  .wins { margin:6px 0 0; padding-left:20px; }
+  .tabs { display:flex; gap:8px; margin-bottom:16px; }
+  .tab { background:none; border:0; padding:8px 4px; border-bottom:2px solid transparent; font-weight:600; color:var(--muted); }
+  .tab.active { color:var(--ink); border-bottom-color:var(--ink); }
+  textarea, input[type=text], input[type=email], input[type=password] { width:100%; font:inherit; padding:9px 11px; border:1px solid #d1d5db; border-radius:8px; }
+  textarea.tpl { font-family:ui-monospace,Menlo,Consolas,monospace; font-size:13px; min-height:360px; }
+  label { display:block; font-size:13px; color:var(--muted); margin:10px 0 4px; }
+  .row2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .link { font-family:ui-monospace,Menlo,monospace; font-size:12px; word-break:break-all; background:#f3f4f6; padding:8px; border-radius:6px; }
+  .actions { display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; }
+  .center { text-align:center; padding:60px 16px; color:var(--muted); }
+  .login { max-width:380px; margin:80px auto; background:#fff; padding:24px; border-radius:12px; border:1px solid var(--line); }
+  .toast { position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:var(--ink); color:#fff; padding:10px 16px; border-radius:8px; font-size:14px; }
+  .hist { display:flex; gap:6px; flex-wrap:wrap; margin-top:8px; }
+  .dot { width:22px; height:22px; border-radius:6px; background:#e5e7eb; display:inline-flex; align-items:center; justify-content:center; font-size:10px; color:#fff; }
+  .dot.green { background:var(--green); } .dot.yellow { background:#f59e0b; } .dot.red { background:var(--red); } .dot.sub { background:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+(() => {
+  const app = document.getElementById("app");
+  let KEY = null; try { KEY = localStorage.getItem("p5_admin_key"); } catch {}
+  let view = "week", weekStart = null, data = null, open = null, tab = "summaries";
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const toast = (m) => { const t = document.createElement("div"); t.className = "toast"; t.textContent = m; document.body.appendChild(t); setTimeout(() => t.remove(), 2500); };
+  const api = (method, params = {}, body) =>
+    fetch("/api/admin" + (method === "GET" ? "?" + new URLSearchParams(params) : ""), { method, headers: { "content-type": "application/json", "x-admin-key": KEY }, body: body ? JSON.stringify(body) : undefined })
+      .then(async (r) => { const j = await r.json().catch(() => ({})); if (r.status === 401) { KEY = null; try { localStorage.removeItem("p5_admin_key"); } catch {} renderLogin("That key didn't work."); throw new Error("unauthorized"); } if (!r.ok) throw new Error(j.error || r.statusText); return j; });
+  const addDays = (iso, n) => { const d = new Date(iso + "T00:00:00Z"); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); };
+  const fmt = (iso, o = { month: "short", day: "numeric" }) => new Date(iso + "T12:00:00Z").toLocaleDateString("en-US", { timeZone: "UTC", ...o });
+  const when = (ts) => ts ? new Date(ts).toLocaleString("en-US", { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }) : "";
+
+  function renderLogin(msg) {
+    app.innerHTML = `<div class="login"><h1>Owner dashboard</h1><p class="muted">Enter your admin key.</p>${msg ? `<p style="color:var(--red)">${esc(msg)}</p>` : ""}<input type="password" id="k" placeholder="Admin key"><div class="actions"><button class="b p" id="go">Open</button></div></div>`;
+    const go = async () => { KEY = document.getElementById("k").value.trim(); try { localStorage.setItem("p5_admin_key", KEY); } catch {} load(); };
+    document.getElementById("go").onclick = go;
+    document.getElementById("k").onkeydown = (e) => { if (e.key === "Enter") go(); };
+  }
+
+  async function load() {
+    if (!KEY) return renderLogin();
+    app.innerHTML = `<div class="center">Loading…</div>`;
+    try { data = await api("GET", { view: "week", ...(weekStart ? { week: weekStart } : {}) }); weekStart = data.week_start; render(); }
+    catch (e) { if (e.message !== "unauthorized") app.innerHTML = `<div class="center">${esc(e.message)}</div>`; }
+  }
+
+  const niCount = (w) => { let n = 0; if (!w?.template) return 0; for (const s of w.template.sections) for (const it of s.items) if (it.type === "pass" && w.progress.items?.[it.id]?.value === "ni") n++; return n; };
+  function statusPill(w) {
+    if (!w) return `<span class="pill none">Not started</span>`;
+    if (w.status === "submitted") return `<span class="pill sub">Submitted ${when(w.submitted_at)}</span>`;
+    return `<span class="pill open">In progress · ${w.done}/${w.total}</span>`;
+  }
+  function flagsHtml(w) {
+    if (!w?.flags?.length) return `<p class="muted" style="margin:8px 0">No flags this week.</p>`;
+    const order = { urgent: 0, soon: 1, fyi: 2 };
+    return [...w.flags].sort((a, b) => (order[a.urgency] ?? 3) - (order[b.urgency] ?? 3)).map((f) => `<div class="flag ${esc(f.urgency)}"><span class="tag">${esc(f.urgency)}</span><b>${esc(f.title)}</b>${esc(f.detail)}</div>`).join("");
+  }
+  function responsesHtml(w) {
+    if (!w?.template) return "";
+    let h = `<div class="resp">`;
+    for (const s of w.template.sections) {
+      h += `<h4>${esc(s.title)}</h4>`;
+      for (const it of s.items) {
+        const p = w.progress.items?.[it.id] || {};
+        const done = it.type === "check" ? !!p.done : p.value !== undefined && p.value !== "" && p.value !== null;
+        const val = it.type === "check" ? (done ? `<span class="ok">✓</span>` : `<span class="no">✗</span>`)
+          : it.type === "pass" ? (p.value === "pass" ? `<span class="ok">✓ Pass</span>` : p.value === "ni" ? `<span class="no">⚠ Needs improvement</span>` : `<span class="muted">— not answered</span>`)
+          : (done ? `<b>${esc(p.value)}${it.unit ? " " + esc(it.unit) : ""}</b>` : `<span class="no">—</span>`);
+        h += `<div class="it">${val} ${p.flag ? "⚑ " : ""}${esc(it.label)}${p.note ? `<div class="note">“${esc(p.note)}”</div>` : ""}</div>`;
+      }
+    }
+    if (w.progress.notes) h += `<h4>Closing notes</h4><div class="note">“${esc(w.progress.notes)}”</div>`;
+    return h + `</div>`;
+  }
+
+  function render() {
+    const cur = data.current_week_start;
+    let h = `<div class="top"><div><h1>Manager checklists</h1><div class="muted">Week of ${esc(data.label)}${weekStart === addDays(cur, -7) ? " (last week)" : weekStart === cur ? " (this week, in progress)" : ""}</div></div>
+      <div class="weeknav"><button class="b" id="prev">‹</button><button class="b" id="lastwk">Last week</button><button class="b" id="next" ${weekStart >= cur ? "disabled" : ""}>›</button></div></div>`;
+    h += `<div class="tabs"><button class="tab ${tab === "summaries" ? "active" : ""}" data-tab="summaries">Summaries</button><button class="tab ${tab === "setup" ? "active" : ""}" data-tab="setup">Businesses & checklists</button></div>`;
+
+    if (tab === "summaries") {
+      const bs = data.businesses.filter((b) => b.active);
+      const submitted = bs.filter((b) => b.week?.status === "submitted").length;
+      const urgent = bs.reduce((n, b) => n + (b.week?.flags || []).filter((f) => f.urgency === "urgent").length, 0);
+      h += `<p class="muted">${submitted} of ${bs.length} submitted${urgent ? ` · <span class="flagcount">${urgent} urgent flag${urgent > 1 ? "s" : ""}</span>` : ""}</p><div class="grid">`;
+      for (const b of bs) {
+        const w = b.week, cls = w?.status === "submitted" ? (w.rating || "") : "missing";
+        const uf = (w?.flags || []).filter((f) => f.urgency === "urgent").length, sf = (w?.flags || []).filter((f) => f.urgency === "soon").length;
+        h += `<div class="card ${cls}" data-open="${esc(b.slug)}"><h3>${esc(b.name)}</h3><div class="loc">${esc(b.location || "")}${b.manager_name ? " · " + esc(b.manager_name) : ""}</div><div class="st">${statusPill(w)}</div>
+          ${w?.status === "submitted" ? (w.headline ? `<div class="headline">${esc(w.headline)}</div>` : `<div class="headline muted">Summary generating…</div>`) : ""}
+          ${uf || sf || niCount(w) ? `<div class="st">${uf ? `<span class="flagcount">${uf} urgent</span> ` : ""}${sf ? `<span style="color:var(--amber);font-weight:600">${sf} soon</span> ` : ""}${niCount(w) ? `<span class="muted">${niCount(w)} needs improvement</span>` : ""}</div>` : ""}</div>`;
+      }
+      h += `</div><div class="summary-list">`;
+      for (const b of bs) {
+        const w = b.week, isOpen = open === b.slug;
+        h += `<div class="biz" id="biz-${esc(b.slug)}"><div class="hd" data-open="${esc(b.slug)}"><h2>${esc(b.name)}</h2><div>${statusPill(w)}</div></div>`;
+        if (isOpen) {
+          h += `<div class="body">`;
+          if (!w || w.status !== "submitted") {
+            h += `<p class="muted">${w ? `Not submitted yet — ${w.done} of ${w.total} items done so far.` : "The manager hasn't opened this week's checklist."}${w?.reminder_sent_at ? ` Reminder sent ${when(w.reminder_sent_at)}.` : ""}</p>
+              <div class="actions">${w ? `<button class="b" data-act="send_reminder" data-slug="${esc(b.slug)}">Send reminder now</button>` : ""}<button class="b" data-act="send_link" data-slug="${esc(b.slug)}">Email checklist link</button></div>`;
+            if (w) h += `<details><summary>See progress so far</summary>${responsesHtml(w)}</details>`;
+          } else {
+            h += w.summary ? `<p>${esc(w.summary)}</p>` : `<p class="muted">Summary is being generated. Refresh in a moment, or regenerate below.</p>`;
+            h += `<h3 style="font-size:14px;margin:14px 0 4px">Flags</h3>${flagsHtml(w)}`;
+            if (w.wins?.length) h += `<h3 style="font-size:14px;margin:14px 0 4px">Wins</h3><ul class="wins">${w.wins.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>`;
+            h += `<details><summary>Full responses (${w.done}/${w.total} done)</summary>${responsesHtml(w)}</details>
+              <div class="actions"><button class="b" data-act="summarize" data-slug="${esc(b.slug)}">Regenerate summary</button><button class="b" data-act="reopen" data-slug="${esc(b.slug)}">Reopen for edits</button><button class="b" data-act="history" data-slug="${esc(b.slug)}">History</button></div><div id="hist-${esc(b.slug)}"></div>`;
+          }
+          h += `</div>`;
+        }
+        h += `</div>`;
+      }
+      h += `</div>`;
+    } else {
+      h += `<p class="muted">Edit who gets each checklist and what's on it. Checklist edits apply to the current open week and every week after.</p>`;
+      for (const b of data.businesses) {
+        const isOpen = open === b.slug;
+        h += `<div class="biz"><div class="hd" data-open="${esc(b.slug)}"><h2>${esc(b.name)} ${b.active ? "" : '<span class="pill none">inactive</span>'}</h2><span class="muted">${esc(b.manager_email || "no manager email")}</span></div>`;
+        if (isOpen) h += `<div class="body"><form data-slug="${esc(b.slug)}"><div class="row2"><div><label>Business name</label><input type="text" name="name" value="${esc(b.name)}"></div><div><label>Location</label><input type="text" name="location" value="${esc(b.location || "")}"></div>
+          <div><label>Manager name</label><input type="text" name="manager_name" value="${esc(b.manager_name || "")}"></div><div><label>Manager email</label><input type="email" name="manager_email" value="${esc(b.manager_email || "")}"></div></div>
+          <label><input type="checkbox" name="active" ${b.active ? "checked" : ""}> Active (gets Sunday emails and Monday reminders)</label>
+          <label>Manager's private link</label><div class="link">${esc(b.link)}</div>
+          <label>Checklist (JSON — sections → items; item types: pass = Pass/Needs improvement, check = tick box, number, text)</label><textarea class="tpl" name="template">${esc(JSON.stringify(b.template, null, 2))}</textarea>
+          <div class="actions"><button class="b p" type="submit">Save</button><button class="b" type="button" data-act="send_link" data-slug="${esc(b.slug)}">Email link to manager</button><button class="b" type="button" data-act="copy" data-link="${esc(b.link)}">Copy link</button><button class="b danger" type="button" data-act="rotate_key" data-slug="${esc(b.slug)}">New link (old one stops working)</button></div></form></div>`;
+        h += `</div>`;
+      }
+    }
+    app.innerHTML = h;
+  }
+
+  app.addEventListener("click", async (e) => {
+    const t = e.target;
+    if (t.id === "prev") { weekStart = addDays(weekStart, -7); return load(); }
+    if (t.id === "next") { weekStart = addDays(weekStart, 7); return load(); }
+    if (t.id === "lastwk") { weekStart = addDays(data.current_week_start, -7); return load(); }
+    if (t.dataset.tab) { tab = t.dataset.tab; open = null; return render(); }
+    const o = t.closest("[data-open]");
+    if (o && !t.closest("button")) { open = open === o.dataset.open ? null : o.dataset.open; render(); if (open && tab === "summaries") document.getElementById("biz-" + open)?.scrollIntoView({ behavior: "smooth", block: "start" }); return; }
+    const btn = t.closest("button[data-act]"); if (!btn) return;
+    const { act, slug } = btn.dataset;
+    if (act === "copy") { try { await navigator.clipboard.writeText(btn.dataset.link); toast("Link copied"); } catch { prompt("Copy this link:", btn.dataset.link); } return; }
+    if (act === "rotate_key" && !confirm("Generate a new link? The old link will stop working immediately and you'll need to send the new one to the manager.")) return;
+    if (act === "reopen" && !confirm("Reopen this week so the manager can edit and resubmit? The current summary stays until they resubmit and you regenerate.")) return;
+    if (act === "history") {
+      const box = document.getElementById("hist-" + slug); box.innerHTML = `<p class="muted">Loading…</p>`;
+      const r = await api("GET", { view: "history", b: slug });
+      box.innerHTML = `<div class="hist">${r.weeks.map((w) => `<span class="dot ${w.status === "submitted" ? (w.rating || "sub") : ""}" title="${esc(w.label)}: ${w.status}${w.headline ? " — " + esc(w.headline) : ""}">${fmt(w.week_start, { day: "numeric" })}</span>`).join("")}</div><p class="muted" style="font-size:12px">Last 16 weeks, newest first. Hover a square for the headline.</p>`;
+      return;
+    }
+    btn.disabled = true; const old = btn.textContent; btn.textContent = "Working…";
+    try {
+      await api("POST", {}, { action: act, slug, week_start: weekStart, force: true });
+      toast(act === "send_link" ? "Link emailed" : act === "send_reminder" ? "Reminder sent" : act === "summarize" ? "Summary regenerated" : "Done");
+      await load();
+    } catch (err) { toast(err.message); btn.disabled = false; btn.textContent = old; }
+  });
+  app.addEventListener("submit", async (e) => {
+    e.preventDefault(); const f = e.target; if (!f.dataset.slug) return;
+    let template; try { template = JSON.parse(f.template.value); } catch { return toast("Checklist JSON has a syntax error — check commas and brackets."); }
+    try {
+      await api("POST", {}, { action: "update_business", slug: f.dataset.slug, fields: { name: f.name.value, location: f.location.value, manager_name: f.manager_name.value, manager_email: f.manager_email.value, active: f.active.checked, template } });
+      toast("Saved"); await load();
+    } catch (err) { toast(err.message); }
+  });
+  load();
+})();
+</script>
+</body>
+</html>

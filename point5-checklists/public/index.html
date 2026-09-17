@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Weekly Checklist</title>
+<style>
+  :root { --bg:#f6f6f7; --card:#fff; --ink:#18181b; --muted:#6b7280; --line:#e5e7eb; --blue:#1d4ed8; --green:#15803d; --amber:#b45309; --red:#b91c1c; --flag:#fef3c7; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  .wrap { max-width:680px; margin:0 auto; padding:16px 16px 120px; }
+  header { padding:8px 0 12px; }
+  h1 { font-size:22px; margin:0; }
+  .sub { color:var(--muted); font-size:14px; }
+  .banner { background:#fff7ed; border:1px solid #fed7aa; color:#9a3412; border-radius:10px; padding:12px 14px; margin:12px 0; font-size:15px; }
+  .banner a { color:inherit; font-weight:600; }
+  .tabs { display:flex; gap:8px; flex-wrap:wrap; margin:12px 0; }
+  .tab { border:1px solid var(--line); background:#fff; border-radius:999px; padding:6px 14px; font-size:14px; cursor:pointer; }
+  .tab.active { background:var(--ink); color:#fff; border-color:var(--ink); }
+  .progress { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; margin:12px 0; }
+  .bar { height:8px; background:#e5e7eb; border-radius:99px; overflow:hidden; margin-top:8px; }
+  .bar i { display:block; height:100%; background:var(--blue); width:0; transition:width .3s; }
+  .prow { display:flex; justify-content:space-between; align-items:baseline; font-size:14px; }
+  .saved { color:var(--muted); font-size:13px; }
+  .saved.err { color:var(--red); font-weight:600; }
+  section.card { background:var(--card); border:1px solid var(--line); border-radius:12px; margin:14px 0; overflow:hidden; }
+  section.card h2 { font-size:15px; margin:0; padding:12px 16px; background:#fafafa; border-bottom:1px solid var(--line); text-transform:uppercase; letter-spacing:.04em; color:#374151; }
+  .item { padding:12px 16px; border-bottom:1px solid var(--line); }
+  .item:last-child { border-bottom:0; }
+  .item.flagged { background:var(--flag); }
+  .row { display:flex; gap:12px; align-items:flex-start; }
+  .row input[type=checkbox] { width:24px; height:24px; margin:2px 0 0; flex:none; accent-color:var(--blue); }
+  .label { flex:1; }
+  .label.done { color:var(--muted); text-decoration:line-through; }
+  .hint { color:var(--muted); font-size:13px; display:block; }
+  .field { margin-top:8px; }
+  input[type=text], input[type=number], textarea { width:100%; font:inherit; padding:10px 12px; border:1px solid #d1d5db; border-radius:8px; background:#fff; }
+  textarea { min-height:70px; resize:vertical; }
+  textarea.ans { min-height:56px; }
+  .tools { display:flex; gap:14px; margin-top:8px; font-size:13px; }
+  .tools button { background:none; border:0; padding:0; color:var(--blue); font:inherit; font-size:13px; cursor:pointer; }
+  .tools button.on { color:var(--amber); font-weight:700; }
+  .note { margin-top:8px; }
+  .pf { display:flex; gap:8px; margin-top:8px; }
+  .pf button { flex:1; font:inherit; font-size:14px; font-weight:600; padding:10px 8px; border-radius:8px; border:1px solid #d1d5db; background:#fff; color:#374151; cursor:pointer; }
+  .pf button.on-pass { background:#dcfce7; border-color:#16a34a; color:#166534; }
+  .pf button.on-ni { background:#fef3c7; border-color:#d97706; color:#92400e; }
+  .pf button:disabled { cursor:default; opacity:.7; }
+  .pf button:disabled.on-pass, .pf button:disabled.on-ni { opacity:1; }
+  .notes-card { padding:16px; }
+  .footer { position:fixed; left:0; right:0; bottom:0; background:#fff; border-top:1px solid var(--line); padding:12px 16px; }
+  .footer .in { max-width:680px; margin:0 auto; display:flex; gap:12px; align-items:center; }
+  .btn { flex:1; background:var(--blue); color:#fff; border:0; border-radius:10px; padding:14px; font:inherit; font-weight:700; font-size:16px; cursor:pointer; }
+  .btn:disabled { background:#9ca3af; }
+  .btn.ghost { background:#fff; color:var(--ink); border:1px solid var(--line); flex:0 0 auto; }
+  .done-box { background:#ecfdf5; border:1px solid #a7f3d0; color:#065f46; border-radius:12px; padding:16px; margin:12px 0; }
+  .center { text-align:center; padding:60px 16px; color:var(--muted); }
+  .recent { font-size:14px; color:var(--muted); margin-top:20px; }
+  .modal { position:fixed; inset:0; background:rgba(0,0,0,.45); display:flex; align-items:flex-end; justify-content:center; padding:16px; }
+  .modal .box { background:#fff; border-radius:14px; padding:20px; width:100%; max-width:480px; }
+  .modal h3 { margin:0 0 8px; }
+  .modal ul { margin:8px 0 12px; padding-left:20px; color:var(--muted); font-size:14px; max-height:30vh; overflow:auto; }
+  @media (min-width:600px) { .modal { align-items:center; } }
+</style>
+</head>
+<body>
+<div class="wrap" id="app"><div class="center">Loading your checklist…</div></div>
+<script>
+(() => {
+  const qs = new URLSearchParams(location.search);
+  const B = qs.get("b"), KEY = qs.get("key");
+  const app = document.getElementById("app");
+  let data = null, active = null, saveTimer = null, dirty = {};
+
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const api = (method, body) =>
+    fetch("/api/checklist" + (method === "GET" ? `?b=${encodeURIComponent(B)}&key=${encodeURIComponent(KEY)}` : ""), {
+      method, headers: { "content-type": "application/json" }, body: body ? JSON.stringify({ b: B, key: KEY, ...body }) : undefined,
+    }).then(async (r) => { const j = await r.json().catch(() => ({})); if (!r.ok) throw Object.assign(new Error(j.error || r.statusText), { status: r.status, week: j.week }); return j; });
+
+  function allWeeks() { return [...data.pending, data.current]; }
+  function week() { return allWeeks().find((w) => w.week_start === active) || data.current; }
+  function item(w, id) { w.progress.items ||= {}; return (w.progress.items[id] ||= {}); }
+  function isDone(it, p) { return it.type === "check" ? !!p.done : p.value !== undefined && p.value !== "" && p.value !== null; }
+  function counts(w) { let d = 0, t = 0; for (const s of w.template.sections) for (const it of s.items) { t++; if (isDone(it, w.progress.items?.[it.id] || {})) d++; } return { d, t }; }
+
+  async function load() {
+    if (!B || !KEY) { app.innerHTML = `<div class="center">This page needs a checklist link. Ask Sloan for yours.</div>`; return; }
+    try {
+      data = await api("GET");
+      active = data.pending.length ? data.pending[0].week_start : data.current.week_start;
+      render();
+    } catch (e) { app.innerHTML = `<div class="center">${esc(e.message)}</div>`; }
+  }
+
+  function render() {
+    const w = week(), { d, t } = counts(w), pct = t ? Math.round((d / t) * 100) : 0;
+    const locked = w.status === "submitted";
+    const isCurrent = w.week_start === data.current.week_start;
+    let html = `<header><h1>${esc(data.business.name)}</h1><div class="sub">Weekly manager checklist${data.business.manager_name ? " · " + esc(data.business.manager_name) : ""}</div></header>`;
+
+    const unsubmitted = data.pending.filter((x) => x.status !== "submitted");
+    if (unsubmitted.length) {
+      html += `<div class="banner">⏰ ${unsubmitted.length === 1 ? "Last week's checklist hasn't been submitted yet." : `${unsubmitted.length} past checklists haven't been submitted yet.`} Finish and submit ${unsubmitted.length === 1 ? "it" : "them"} first, then move on to this week.</div>`;
+    }
+    if (allWeeks().length > 1) {
+      html += `<div class="tabs">${allWeeks().map((x) => `<button class="tab ${x.week_start === active ? "active" : ""}" data-w="${x.week_start}">${x.week_start === data.current.week_start ? "This week" : "Week of " + esc(x.label.split(" – ")[0])}${x.status === "submitted" ? " ✓" : ""}</button>`).join("")}</div>`;
+    }
+    html += `<div class="progress"><div class="prow"><strong>${isCurrent ? "This week" : "Week"}: ${esc(w.label)}</strong><span class="saved" id="saved">${locked ? "Submitted" : "Saves automatically"}</span></div><div class="bar"><i style="width:${pct}%"></i></div><div class="prow" style="margin-top:6px"><span>${d} of ${t} done</span><span>${pct}%</span></div></div>`;
+    if (locked) html += `<div class="done-box">✅ Submitted ${new Date(w.submitted_at).toLocaleString("en-US", { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" })}. Thanks — Sloan has it. You can still scroll through your answers below.</div>`;
+
+    for (const s of w.template.sections) {
+      html += `<section class="card"><h2>${esc(s.title)}</h2>`;
+      for (const it of s.items) {
+        const p = w.progress.items?.[it.id] || {};
+        const dis = locked ? "disabled" : "";
+        html += `<div class="item ${p.flag ? "flagged" : ""}" data-id="${esc(it.id)}"><div class="row">`;
+        if (it.type === "check") html += `<input type="checkbox" data-act="done" ${p.done ? "checked" : ""} ${dis}><div class="label ${p.done ? "done" : ""}">${esc(it.label)}${it.hint ? `<span class="hint">${esc(it.hint)}</span>` : ""}</div>`;
+        else if (it.type === "pass") html += `<div class="label">${esc(it.label)}${it.hint ? `<span class="hint">${esc(it.hint)}</span>` : ""}<div class="pf"><button data-act="pass" data-v="pass" class="${p.value === "pass" ? "on-pass" : ""}" ${dis}>✓ Pass</button><button data-act="pass" data-v="ni" class="${p.value === "ni" ? "on-ni" : ""}" ${dis}>Needs improvement</button></div></div>`;
+        else html += `<div class="label">${esc(it.label)}${it.hint ? `<span class="hint">${esc(it.hint)}</span>` : ""}<div class="field">${it.type === "number"
+              ? `<input type="number" inputmode="decimal" data-act="value" placeholder="${esc(it.unit || "0")}" value="${esc(p.value ?? "")}" ${dis}>`
+              : `<textarea data-act="value" class="ans" placeholder="Type here…" ${dis}>${esc(p.value ?? "")}</textarea>`}</div></div>`;
+        html += `</div>`;
+        if (!locked || p.note || p.flag) html += `<div class="tools">${locked ? "" : `${it.type === "text" ? "" : `<button data-act="toggle-note">${p.note !== undefined && p.note !== "" || p._noteOpen ? "Hide note" : "＋ Add note"}</button>`}<button data-act="flag" class="${p.flag ? "on" : ""}">${p.flag ? "⚑ Flagged for Sloan" : "⚑ Flag for Sloan"}</button>`}${locked && p.flag ? `<span style="color:var(--amber);font-weight:700">⚑ Flagged for Sloan</span>` : ""}</div>`;
+        if (p.note || p._noteOpen) html += `<div class="note"><textarea data-act="note" placeholder="What should Sloan know about this?" ${dis}>${esc(p.note || "")}</textarea></div>`;
+        html += `</div>`;
+      }
+      html += `</section>`;
+    }
+    html += `<section class="card"><h2>Anything else this week?</h2><div class="notes-card"><textarea data-act="notes" placeholder="Staffing, customer feedback, something that broke, an idea, a win — anything Sloan should hear about." ${locked ? "disabled" : ""}>${esc(w.progress.notes || "")}</textarea></div></section>`;
+    if (data.recent.length) html += `<div class="recent">Recently submitted: ${data.recent.map((r) => esc(r.label.split(" – ")[0])).join(", ")}</div>`;
+    html += locked ? "" : `<div class="footer"><div class="in"><button class="btn" id="submit">Submit week of ${esc(w.label.split(" – ")[0])}</button></div></div>`;
+    app.innerHTML = html;
+  }
+
+  function scheduleSave() {
+    const w = week();
+    dirty[w.week_start] = true;
+    const el = document.getElementById("saved"); if (el) { el.textContent = "Saving…"; el.classList.remove("err"); }
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(save, 900);
+  }
+  async function save(action = "save", ws = active) {
+    const w = allWeeks().find((x) => x.week_start === ws);
+    const el = document.getElementById("saved");
+    try {
+      const clean = JSON.parse(JSON.stringify(w.progress, (k, v) => (k.startsWith("_") ? undefined : v)));
+      const r = await api("POST", { action, week_start: ws, progress: clean });
+      dirty[ws] = false;
+      if (action === "submit") {
+        Object.assign(w, r.week);
+        fetch("/api/summarize", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ b: B, key: KEY, week_start: ws }) }).catch(() => {});
+        return r;
+      }
+      if (el && !dirty[ws]) el.textContent = "Saved ✓";
+    } catch (e) {
+      if (e.status === 409 && e.week) { Object.assign(w, e.week); render(); return; }
+      if (el) { el.textContent = "Not saved — check your connection"; el.classList.add("err"); }
+      throw e;
+    }
+  }
+
+  app.addEventListener("click", (e) => {
+    const tab = e.target.closest(".tab");
+    if (tab) { active = tab.dataset.w; render(); return; }
+    const btn = e.target.closest("button[data-act]");
+    if (btn) {
+      const w = week(), id = btn.closest(".item").dataset.id, p = item(w, id);
+      if (btn.dataset.act === "pass") { p.value = p.value === btn.dataset.v ? "" : btn.dataset.v; if (p.value === "ni" && !p.note) p._noteOpen = true; scheduleSave(); }
+      if (btn.dataset.act === "flag") { p.flag = !p.flag; if (p.flag && !p.note) p._noteOpen = true; scheduleSave(); }
+      if (btn.dataset.act === "toggle-note") { if (p.note) { p.note = ""; p._noteOpen = false; scheduleSave(); } else p._noteOpen = !p._noteOpen; }
+      render();
+      if (p._noteOpen) document.querySelector(`.item[data-id="${CSS.escape(id)}"] textarea`)?.focus();
+      return;
+    }
+    if (e.target.id === "submit") confirmSubmit();
+  });
+  app.addEventListener("change", (e) => {
+    const t = e.target; if (!t.dataset.act) return;
+    const w = week();
+    if (t.dataset.act === "notes") { w.progress.notes = t.value; scheduleSave(); return; }
+    const p = item(w, t.closest(".item").dataset.id);
+    if (t.dataset.act === "done") { p.done = t.checked; scheduleSave(); render(); }
+    if (t.dataset.act === "value") { p.value = t.type === "number" && t.value !== "" ? Number(t.value) : t.value; scheduleSave(); render(); }
+    if (t.dataset.act === "note") { p.note = t.value; scheduleSave(); }
+  });
+  app.addEventListener("input", (e) => {
+    const t = e.target, act = t.dataset.act; if (!["note", "notes", "value"].includes(act)) return;
+    const w = week();
+    if (act === "notes") w.progress.notes = t.value;
+    else if (act === "note") item(w, t.closest(".item").dataset.id).note = t.value;
+    else item(w, t.closest(".item").dataset.id).value = t.type === "number" && t.value !== "" ? Number(t.value) : t.value;
+    scheduleSave();
+  });
+
+  function confirmSubmit() {
+    const w = week(), { d, t } = counts(w);
+    const missing = [];
+    for (const s of w.template.sections) for (const it of s.items) if (!isDone(it, w.progress.items?.[it.id] || {})) missing.push(it.label);
+    const m = document.createElement("div"); m.className = "modal";
+    m.innerHTML = `<div class="box"><h3>Submit week of ${esc(w.label.split(" – ")[0])}?</h3><p style="margin:0;color:var(--muted);font-size:14px">${d} of ${t} items done.${missing.length ? " Not done:" : " Everything's checked off — nice work."}</p>${missing.length ? `<ul>${missing.slice(0, 12).map((x) => `<li>${esc(x)}</li>`).join("")}${missing.length > 12 ? `<li>…and ${missing.length - 12} more</li>` : ""}</ul><p style="font-size:14px;color:var(--muted)">That's okay — just make sure anything important has a note so Sloan knows why.</p>` : ""}<div style="display:flex;gap:10px;margin-top:8px"><button class="btn ghost" id="m-cancel">Keep working</button><button class="btn" id="m-ok">Submit</button></div></div>`;
+    document.body.appendChild(m);
+    m.querySelector("#m-cancel").onclick = () => m.remove();
+    m.querySelector("#m-ok").onclick = async () => {
+      m.querySelector("#m-ok").disabled = true; m.querySelector("#m-ok").textContent = "Submitting…";
+      clearTimeout(saveTimer);
+      try { await save("submit", w.week_start); m.remove(); render(); window.scrollTo(0, 0); }
+      catch (e) { m.querySelector("#m-ok").disabled = false; m.querySelector("#m-ok").textContent = "Try again"; alert(e.message); }
+    };
+  }
+
+  window.addEventListener("beforeunload", (e) => { if (Object.values(dirty).some(Boolean)) { e.preventDefault(); e.returnValue = ""; } });
+  load();
+})();
+</script>
+</body>
+</html>

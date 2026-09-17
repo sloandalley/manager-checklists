@@ -1,0 +1,12 @@
+{
+  "name": "point5-checklists",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Weekly manager checklists for Point 5 Fun — Netlify + Supabase + SendGrid + Claude",
+  "scripts": {
+    "seed": "node scripts/build-seed.mjs",
+    "dev": "netlify dev"
+  },
+  "engines": { "node": ">=18" }
+}

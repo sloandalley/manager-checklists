@@ -1,0 +1,364 @@
+{
+  "sections": [
+    {
+      "title": "First Impression and Exterior",
+      "items": [
+        {
+          "label": "Exterior signage, entry, and public-facing areas are clean, safe, and easy to understand",
+          "type": "pass",
+          "id": "s1_1"
+        },
+        {
+          "label": "Hours, pricing, and booking information are accurate online and at the entrance",
+          "type": "pass",
+          "id": "s1_2"
+        },
+        {
+          "label": "Lobby presentation matches the brand and creates anticipation before the game begins",
+          "type": "pass",
+          "id": "s1_3"
+        },
+        {
+          "label": "Bathrooms, seating, and waiting areas are clean and fully stocked",
+          "type": "pass",
+          "id": "s1_4"
+        },
+        {
+          "label": "Any obvious maintenance issues are identified, assigned, and tracked quickly",
+          "type": "pass",
+          "id": "s1_5"
+        }
+      ]
+    },
+    {
+      "title": "Front Desk, Phones, and Guest Communication",
+      "items": [
+        {
+          "label": "Phones, voicemails, email, and booking messages are checked and answered promptly",
+          "type": "pass",
+          "id": "s2_1"
+        },
+        {
+          "label": "Staff greet guests quickly and confidently explain waivers, timing, and game expectations",
+          "type": "pass",
+          "id": "s2_2"
+        },
+        {
+          "label": "Reservations, waivers, and guest counts are organized before each booking arrives",
+          "type": "pass",
+          "id": "s2_3"
+        },
+        {
+          "label": "Staff communicate clearly with groups about arrival time, late arrivals, and game flow",
+          "type": "pass",
+          "id": "s2_4"
+        },
+        {
+          "label": "Guest issues or special requests are handled professionally and escalated when needed",
+          "type": "pass",
+          "id": "s2_5"
+        }
+      ]
+    },
+    {
+      "title": "Cleanliness and Facility Presentation",
+      "items": [
+        {
+          "label": "Lobby, hallways, room exteriors, and common areas are consistently clean and clutter-free",
+          "type": "pass",
+          "id": "s3_1"
+        },
+        {
+          "label": "Trash is removed before it becomes noticeable to guests",
+          "type": "pass",
+          "id": "s3_2"
+        },
+        {
+          "label": "Lighting, sound, props, and thematic decor feel intentional and in good condition",
+          "type": "pass",
+          "id": "s3_3"
+        },
+        {
+          "label": "Back-of-house storage and staff areas are organized enough to support fast resets",
+          "type": "pass",
+          "id": "s3_4"
+        },
+        {
+          "label": "Any damaged props, furniture, or fixtures are removed, repaired, or clearly flagged",
+          "type": "pass",
+          "id": "s3_5"
+        }
+      ]
+    },
+    {
+      "title": "Booking Flow, Parties, and Group Execution",
+      "items": [
+        {
+          "label": "Upcoming bookings for the week are reviewed and staffing coverage is confirmed",
+          "type": "pass",
+          "id": "s4_1"
+        },
+        {
+          "label": "Party rooms or private event spaces are clean, set correctly, and ready before arrival",
+          "type": "pass",
+          "id": "s4_2"
+        },
+        {
+          "label": "Food, drinks, waivers, and add-ons for parties or group events are confirmed in advance",
+          "type": "pass",
+          "id": "s4_3"
+        },
+        {
+          "label": "Front desk and game masters know the schedule, party details, and any special notes",
+          "type": "pass",
+          "id": "s4_4"
+        },
+        {
+          "label": "Groups move through check-in, gameplay, party time, and exit without avoidable confusion",
+          "type": "pass",
+          "id": "s4_5"
+        }
+      ]
+    },
+    {
+      "title": "Escape Room Readiness and Reset Quality",
+      "items": [
+        {
+          "label": "Every room is fully reset, clean, and ready before the next group starts",
+          "type": "pass",
+          "id": "s5_1"
+        },
+        {
+          "label": "Reset checklists are followed and completed with consistency",
+          "type": "pass",
+          "id": "s5_2"
+        },
+        {
+          "label": "Locks, sensors, triggers, magnets, screens, and clue mechanisms are tested and functioning",
+          "type": "pass",
+          "id": "s5_3"
+        },
+        {
+          "label": "Consumables, props, and replacement items are stocked and easy for staff to access",
+          "type": "pass",
+          "id": "s5_4"
+        },
+        {
+          "label": "Any room with a known issue is documented immediately and either fixed or removed from sale",
+          "type": "pass",
+          "id": "s5_5"
+        }
+      ]
+    },
+    {
+      "title": "Game Mastering and Clue Delivery",
+      "items": [
+        {
+          "label": "Game masters explain rules, story, and safety expectations clearly and with energy",
+          "type": "pass",
+          "id": "s6_1"
+        },
+        {
+          "label": "Staff monitor games attentively and intervene at the right moments",
+          "type": "pass",
+          "id": "s6_2"
+        },
+        {
+          "label": "Clues are delivered in a way that supports fun without giving away too much too early",
+          "type": "pass",
+          "id": "s6_3"
+        },
+        {
+          "label": "Staff stay in character or on-brand when appropriate for the room experience",
+          "type": "pass",
+          "id": "s6_4"
+        },
+        {
+          "label": "Escalations, stuck groups, and technical issues are handled calmly and quickly",
+          "type": "pass",
+          "id": "s6_5"
+        }
+      ]
+    },
+    {
+      "title": "Safety, Security, and Risk Control",
+      "items": [
+        {
+          "label": "Emergency exits, paths of travel, and safety equipment remain accessible",
+          "type": "pass",
+          "id": "s7_1"
+        },
+        {
+          "label": "Cameras, alarms, radios, and key security systems are working as expected",
+          "type": "pass",
+          "id": "s7_2"
+        },
+        {
+          "label": "Staff know what to do for injury, evacuation, guest conflict, or equipment failure",
+          "type": "pass",
+          "id": "s7_3"
+        },
+        {
+          "label": "Trip hazards, broken furniture, exposed wires, or unsafe props are corrected immediately",
+          "type": "pass",
+          "id": "s7_4"
+        },
+        {
+          "label": "Incident reports, refunds, and serious guest concerns are documented clearly",
+          "type": "pass",
+          "id": "s7_5"
+        }
+      ]
+    },
+    {
+      "title": "Staff Training, Scheduling, and Accountability",
+      "items": [
+        {
+          "label": "Schedule is posted with adequate coverage for nights, weekends, and large groups",
+          "type": "pass",
+          "id": "s8_1"
+        },
+        {
+          "label": "New staff are trained on check-in, room reset, clue standards, and guest communication",
+          "type": "pass",
+          "id": "s8_2"
+        },
+        {
+          "label": "Managers coach staff quickly when standards slip instead of letting problems repeat",
+          "type": "pass",
+          "id": "s8_3"
+        },
+        {
+          "label": "Uniforms, appearance, and professionalism match brand expectations",
+          "type": "pass",
+          "id": "s8_4"
+        },
+        {
+          "label": "Employee wins, misses, and follow-up items are documented and addressed weekly",
+          "type": "pass",
+          "id": "s8_5"
+        }
+      ]
+    },
+    {
+      "title": "Sales, Revenue Capture, and Follow-Through",
+      "items": [
+        {
+          "label": "Upsells, add-ons, and private-event opportunities are explained when appropriate",
+          "type": "pass",
+          "id": "s9_1"
+        },
+        {
+          "label": "Discounts, refunds, and comps are used appropriately and reviewed by management",
+          "type": "pass",
+          "id": "s9_2"
+        },
+        {
+          "label": "POS system, waivers, and booking platform are working correctly and reconciled as needed",
+          "type": "pass",
+          "id": "s9_3"
+        },
+        {
+          "label": "Gift cards, merch, snacks, or other revenue items are displayed and easy to purchase",
+          "type": "pass",
+          "id": "s9_4"
+        },
+        {
+          "label": "Managers review missed-sales opportunities and guest friction points each week",
+          "type": "pass",
+          "id": "s9_5"
+        }
+      ]
+    },
+    {
+      "title": "Marketing, Reviews, and Local Awareness",
+      "items": [
+        {
+          "label": "At least 3 social videos/day were posted this week",
+          "type": "pass",
+          "id": "s10_1"
+        },
+        {
+          "label": "Upcoming events, promotions, and room highlights are being shared consistently",
+          "type": "pass",
+          "id": "s10_2"
+        },
+        {
+          "label": "Google profile, website details, and social pages show accurate hours and current offers",
+          "type": "pass",
+          "id": "s10_3"
+        },
+        {
+          "label": "Recent reviews are monitored and responded to appropriately",
+          "type": "pass",
+          "id": "s10_4"
+        },
+        {
+          "label": "Staff actively invite happy guests to leave reviews or share their experience online",
+          "type": "pass",
+          "id": "s10_5"
+        }
+      ]
+    },
+    {
+      "title": "Weekly Manager Follow-Through",
+      "items": [
+        {
+          "label": "Weekly checklist issues from the prior week were reviewed and corrected",
+          "type": "pass",
+          "id": "s11_1"
+        },
+        {
+          "label": "Any unresolved maintenance, room issues, or staff problems were followed up on",
+          "type": "pass",
+          "id": "s11_2"
+        },
+        {
+          "label": "Inventory for cleaning, office, party, and room-reset supplies was checked and reordered as needed",
+          "type": "pass",
+          "id": "s11_3"
+        },
+        {
+          "label": "Important emails, notices, or operational updates were handled instead of ignored",
+          "type": "pass",
+          "id": "s11_4"
+        },
+        {
+          "label": "Top 3 action items for next week are clear, assigned, and time-bound",
+          "type": "pass",
+          "id": "s11_5"
+        }
+      ]
+    },
+    {
+      "title": "Weekly Summary",
+      "items": [
+        {
+          "label": "Top strengths this week",
+          "type": "text",
+          "id": "s12_1"
+        },
+        {
+          "label": "Top issues needing correction",
+          "type": "text",
+          "id": "s12_2"
+        },
+        {
+          "label": "Highest-priority fix for next week",
+          "type": "text",
+          "id": "s12_3"
+        },
+        {
+          "label": "Person responsible",
+          "type": "text",
+          "id": "s12_4"
+        },
+        {
+          "label": "Target completion date",
+          "type": "text",
+          "id": "s12_5"
+        }
+      ]
+    }
+  ]
+}

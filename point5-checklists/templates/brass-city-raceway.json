@@ -1,0 +1,475 @@
+{
+  "sections": [
+    {
+      "title": "First Impression and Exterior",
+      "items": [
+        {
+          "label": "Parking lot and entry are clean, safe, and free of trash",
+          "type": "pass",
+          "id": "s1_1"
+        },
+        {
+          "label": "Exterior signage, lighting, and hours are visible and accurate",
+          "type": "pass",
+          "id": "s1_2"
+        },
+        {
+          "label": "Windows, doors, and entrance area are clean and inviting",
+          "type": "pass",
+          "id": "s1_3"
+        },
+        {
+          "label": "Promotional signage is current and supports active offers",
+          "type": "pass",
+          "id": "s1_4"
+        },
+        {
+          "label": "Exterior walk is checked for hazards, damage, or guest concerns",
+          "type": "pass",
+          "id": "s1_5"
+        }
+      ]
+    },
+    {
+      "title": "Front Counter, Communication, and Guest Readiness",
+      "items": [
+        {
+          "label": "Phones, voicemails, and primary email are checked daily and handled promptly",
+          "type": "pass",
+          "id": "s2_1"
+        },
+        {
+          "label": "Important issues that cannot be resolved locally are escalated quickly",
+          "type": "pass",
+          "id": "s2_2"
+        },
+        {
+          "label": "Front counter is organized, stocked, and guest-ready",
+          "type": "pass",
+          "id": "s2_3"
+        },
+        {
+          "label": "Pricing, waivers, attraction rules, and party information are clearly available",
+          "type": "pass",
+          "id": "s2_4"
+        },
+        {
+          "label": "Staff can explain promotions, hours, attraction rules, and party options accurately",
+          "type": "pass",
+          "id": "s2_5"
+        },
+        {
+          "label": "Guest wait times at check-in and waiver flow are acceptable",
+          "type": "pass",
+          "id": "s2_6"
+        },
+        {
+          "label": "POS, waiver, and payment systems are working correctly",
+          "type": "pass",
+          "id": "s2_7"
+        }
+      ]
+    },
+    {
+      "title": "Cleanliness and Facility Presentation",
+      "items": [
+        {
+          "label": "Lobby, seating, hallways, and attraction areas are clean and presentable",
+          "type": "pass",
+          "id": "s3_1"
+        },
+        {
+          "label": "Restrooms are clean, stocked, and free of maintenance issues",
+          "type": "pass",
+          "id": "s3_2"
+        },
+        {
+          "label": "Party rooms are clean, reset, and ready for bookings",
+          "type": "pass",
+          "id": "s3_3"
+        },
+        {
+          "label": "Arcade, karaoke room, axe throwing lanes, karting areas, and batting cage area are clean",
+          "type": "pass",
+          "id": "s3_4"
+        },
+        {
+          "label": "Back-of-house, storage, and staff areas are organized",
+          "type": "pass",
+          "id": "s3_5"
+        },
+        {
+          "label": "Trash is emptied before overflow becomes visible to guests",
+          "type": "pass",
+          "id": "s3_6"
+        }
+      ]
+    },
+    {
+      "title": "Go-Kart Experience and Track Operations",
+      "items": [
+        {
+          "label": "Electric karts are charged, staged, and ready for guest volume",
+          "type": "pass",
+          "id": "s4_1"
+        },
+        {
+          "label": "Karts are inspected for steering, braking, seat belts, body damage, and shutdown function",
+          "type": "pass",
+          "id": "s4_2"
+        },
+        {
+          "label": "Track barriers, gate systems, and pit area are in good condition",
+          "type": "pass",
+          "id": "s4_3"
+        },
+        {
+          "label": "Track surface is clean and free from hazards or debris",
+          "type": "pass",
+          "id": "s4_4"
+        },
+        {
+          "label": "Safety briefing is clear, consistent, and enforced every session",
+          "type": "pass",
+          "id": "s4_5"
+        },
+        {
+          "label": "Helmet inventory is clean, organized, and in good condition",
+          "type": "pass",
+          "id": "s4_6"
+        },
+        {
+          "label": "Race flow is efficient with minimal downtime between groups",
+          "type": "pass",
+          "id": "s4_7"
+        },
+        {
+          "label": "Flagging, speed controls, and incident response are handled properly",
+          "type": "pass",
+          "id": "s4_8"
+        },
+        {
+          "label": "Race results, timing systems, and screens are functioning correctly if in use",
+          "type": "pass",
+          "id": "s4_9"
+        }
+      ]
+    },
+    {
+      "title": "Axe Throwing Experience",
+      "items": [
+        {
+          "label": "Lanes, targets, throwing lines, and fencing are in safe condition",
+          "type": "pass",
+          "id": "s5_1"
+        },
+        {
+          "label": "Axes are in good condition and removed from use when damaged",
+          "type": "pass",
+          "id": "s5_2"
+        },
+        {
+          "label": "Safety rules are posted, explained, and actively enforced",
+          "type": "pass",
+          "id": "s5_3"
+        },
+        {
+          "label": "Staff coaching is attentive and confidence-building for first-time guests",
+          "type": "pass",
+          "id": "s5_4"
+        },
+        {
+          "label": "Lane reservations, waivers, and session timing are handled smoothly",
+          "type": "pass",
+          "id": "s5_5"
+        },
+        {
+          "label": "Target boards are rotated or replaced as needed",
+          "type": "pass",
+          "id": "s5_6"
+        }
+      ]
+    },
+    {
+      "title": "Karaoke Room Experience",
+      "items": [
+        {
+          "label": "Karaoke room is clean, attractive, and fully guest-ready",
+          "type": "pass",
+          "id": "s6_1"
+        },
+        {
+          "label": "Audio, microphones, screens, remotes, and song-selection system are functioning",
+          "type": "pass",
+          "id": "s6_2"
+        },
+        {
+          "label": "Room scheduling and turnover between groups are managed cleanly",
+          "type": "pass",
+          "id": "s6_3"
+        },
+        {
+          "label": "Furniture, décor, and lighting support a fun guest experience",
+          "type": "pass",
+          "id": "s6_4"
+        },
+        {
+          "label": "Staff explain room use, timing, and any food or drink expectations clearly",
+          "type": "pass",
+          "id": "s6_5"
+        }
+      ]
+    },
+    {
+      "title": "Batting Cage Experience",
+      "items": [
+        {
+          "label": "Batting cage area is clean, supervised appropriately, and guest-ready",
+          "type": "pass",
+          "id": "s7_1"
+        },
+        {
+          "label": "Pitching machine, netting, screens, tokens, and control systems are functioning",
+          "type": "pass",
+          "id": "s7_2"
+        },
+        {
+          "label": "Bats, helmets, and guest-use equipment are available and in safe condition",
+          "type": "pass",
+          "id": "s7_3"
+        },
+        {
+          "label": "Safety signage and batting cage rules are clearly posted and enforced",
+          "type": "pass",
+          "id": "s7_4"
+        },
+        {
+          "label": "Guest flow into and out of the batting cage is organized and efficient",
+          "type": "pass",
+          "id": "s7_5"
+        }
+      ]
+    },
+    {
+      "title": "Arcade and Redemption",
+      "items": [
+        {
+          "label": "Arcade games are powered on, working, and presentable",
+          "type": "pass",
+          "id": "s8_1"
+        },
+        {
+          "label": "Broken games are tagged, tracked, and addressed quickly",
+          "type": "pass",
+          "id": "s8_2"
+        },
+        {
+          "label": "Card readers, kiosks, and redemption systems are functioning",
+          "type": "pass",
+          "id": "s8_3"
+        },
+        {
+          "label": "Prize counter is clean, organized, and stocked with appealing inventory",
+          "type": "pass",
+          "id": "s8_4"
+        },
+        {
+          "label": "Staff can answer guest questions about game cards, points, and prizes",
+          "type": "pass",
+          "id": "s8_5"
+        },
+        {
+          "label": "Cash, card, and machine issues are handled promptly and documented",
+          "type": "pass",
+          "id": "s8_6"
+        }
+      ]
+    },
+    {
+      "title": "Parties, Bookings, and Group Execution",
+      "items": [
+        {
+          "label": "Upcoming parties for the week are reviewed and double-checked",
+          "type": "pass",
+          "id": "s9_1"
+        },
+        {
+          "label": "Party food, drinks, tableware, and room setup needs are ordered or prepared correctly",
+          "type": "pass",
+          "id": "s9_2"
+        },
+        {
+          "label": "Party rooms are set on time and reset well after use",
+          "type": "pass",
+          "id": "s9_3"
+        },
+        {
+          "label": "Staff know the party schedule and have enough coverage for busy times",
+          "type": "pass",
+          "id": "s9_4"
+        },
+        {
+          "label": "Hosts or managers check in during parties and resolve issues quickly",
+          "type": "pass",
+          "id": "s9_5"
+        },
+        {
+          "label": "Group events move smoothly across attractions and stay on schedule",
+          "type": "pass",
+          "id": "s9_6"
+        }
+      ]
+    },
+    {
+      "title": "Staff Training, Scheduling, and Accountability",
+      "items": [
+        {
+          "label": "Schedule is built out in advance and shifts are adequately covered",
+          "type": "pass",
+          "id": "s10_1"
+        },
+        {
+          "label": "Busy periods, events, holidays, and large groups have proper staffing",
+          "type": "pass",
+          "id": "s10_2"
+        },
+        {
+          "label": "New employees are being trained for their assigned roles",
+          "type": "pass",
+          "id": "s10_3"
+        },
+        {
+          "label": "Staff issues are corrected quickly and professionally",
+          "type": "pass",
+          "id": "s10_4"
+        },
+        {
+          "label": "Write-ups, coaching, and performance concerns are documented appropriately",
+          "type": "pass",
+          "id": "s10_5"
+        },
+        {
+          "label": "Staff understand attraction rules, promotions, pricing, and party procedures",
+          "type": "pass",
+          "id": "s10_6"
+        },
+        {
+          "label": "Managers are visible, engaged, and solving problems during shifts",
+          "type": "pass",
+          "id": "s10_7"
+        }
+      ]
+    },
+    {
+      "title": "Promotions, Social Media, and Guest Updates",
+      "items": [
+        {
+          "label": "Staff know current promotions and can explain them clearly",
+          "type": "pass",
+          "id": "s11_1"
+        },
+        {
+          "label": "New hours, promotions, or event changes are posted when needed",
+          "type": "pass",
+          "id": "s11_2"
+        },
+        {
+          "label": "Google, social, and guest-facing hours are accurate",
+          "type": "pass",
+          "id": "s11_3"
+        },
+        {
+          "label": "3 social videos/day posted this week",
+          "type": "pass",
+          "id": "s11_4"
+        },
+        {
+          "label": "In-store signage and screens support current events and offers",
+          "type": "pass",
+          "id": "s11_5"
+        },
+        {
+          "label": "Donation requests are handled reasonably and escalated when unusual",
+          "type": "pass",
+          "id": "s11_6"
+        }
+      ]
+    },
+    {
+      "title": "Cash Handling, Reporting, and Manager Follow-Through",
+      "items": [
+        {
+          "label": "Weekly deposit is completed accurately and on time",
+          "type": "pass",
+          "id": "s12_1"
+        },
+        {
+          "label": "Cash discrepancies are documented and escalated quickly",
+          "type": "pass",
+          "id": "s12_2"
+        },
+        {
+          "label": "Arcade, kiosk, and attraction cash systems are emptied and reconciled as needed",
+          "type": "pass",
+          "id": "s12_3"
+        },
+        {
+          "label": "Inventory and supply needs are reviewed and addressed",
+          "type": "pass",
+          "id": "s12_4"
+        },
+        {
+          "label": "Important mail, bills, tax notices, legal notices, or official documents are handled promptly",
+          "type": "pass",
+          "id": "s12_5"
+        },
+        {
+          "label": "Broken attraction items are tracked with clear ownership and follow-up",
+          "type": "pass",
+          "id": "s12_6"
+        },
+        {
+          "label": "Top weekly priorities are reviewed and incomplete items are addressed",
+          "type": "pass",
+          "id": "s12_7"
+        }
+      ]
+    },
+    {
+      "title": "Weekly summary",
+      "items": [
+        {
+          "label": "Strongest area this week",
+          "type": "text",
+          "id": "s13_1"
+        },
+        {
+          "label": "Biggest issue this week",
+          "type": "text",
+          "id": "s13_2"
+        },
+        {
+          "label": "Highest-priority fix before next week",
+          "type": "text",
+          "id": "s13_3"
+        },
+        {
+          "label": "Owner of highest-priority fix",
+          "type": "text",
+          "id": "s13_4"
+        }
+      ]
+    },
+    {
+      "title": "Action items",
+      "items": [
+        {
+          "id": "actions",
+          "type": "text",
+          "label": "Action items for next week — issue, owner, due date",
+          "hint": "One per line"
+        }
+      ]
+    }
+  ]
+}

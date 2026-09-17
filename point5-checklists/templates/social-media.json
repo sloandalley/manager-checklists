@@ -1,0 +1,150 @@
+{
+  "sections": [
+    {
+      "title": "Daily posting (per the weekly posting checklist)",
+      "items": [
+        {
+          "id": "sm_tiktok",
+          "label": "TikTok: one post per day for every business",
+          "type": "check",
+          "hint": "Uncheck and note which businesses/days were missed"
+        },
+        {
+          "id": "sm_ig",
+          "label": "Instagram: one post per day for every business",
+          "type": "check"
+        },
+        {
+          "id": "sm_fb",
+          "label": "Facebook: one post per day for every business",
+          "type": "check"
+        },
+        {
+          "id": "sm_yt",
+          "label": "YouTube: one post per day for every business",
+          "type": "check"
+        },
+        {
+          "id": "sm_missed",
+          "label": "Total scheduled posts that did NOT go out this week",
+          "type": "number",
+          "unit": "posts"
+        },
+        {
+          "id": "sm_gbp",
+          "label": "2 Google Business Profile posts published for every business",
+          "type": "check"
+        }
+      ]
+    },
+    {
+      "title": "Weekly framework",
+      "items": [
+        {
+          "id": "sm_focus",
+          "label": "This week's 3 marketing focuses posted across every business",
+          "type": "check"
+        },
+        {
+          "id": "sm_trends",
+          "label": "2 easy trends of the week produced and posted",
+          "type": "check"
+        },
+        {
+          "id": "sm_tag",
+          "label": "Weekly tag-a-friend post went out for every business",
+          "type": "check"
+        },
+        {
+          "id": "sm_email",
+          "label": "Weekly marketing emails sent (Square for 5 brands, SendGrid for Brass City)",
+          "type": "check"
+        },
+        {
+          "id": "sm_monthly",
+          "label": "Monthly focus content is on track / ready for the paid Meta ads",
+          "type": "check"
+        },
+        {
+          "id": "sm_nextweek",
+          "label": "Next week's plan pulled and content queued",
+          "type": "check",
+          "hint": "Ask Sloan/Claude for the filled-in weekly plan if it's not done"
+        }
+      ]
+    },
+    {
+      "title": "Engagement & reviews",
+      "items": [
+        {
+          "id": "sm_dms",
+          "label": "All DMs and comments across every business answered within 24 hours",
+          "type": "check"
+        },
+        {
+          "id": "sm_reviews",
+          "label": "Every new Google/Facebook review replied to for every business",
+          "type": "check"
+        },
+        {
+          "id": "sm_negative",
+          "label": "Negative reviews or public complaints this week",
+          "type": "number",
+          "unit": "reviews",
+          "hint": "Flag anything that needs Sloan's response"
+        },
+        {
+          "id": "sm_ugc",
+          "label": "Customer tags / user-generated content reshared",
+          "type": "check"
+        }
+      ]
+    },
+    {
+      "title": "Content & media library",
+      "items": [
+        {
+          "id": "sm_library",
+          "label": "New photos/video from the locations filed into the content library",
+          "type": "check"
+        },
+        {
+          "id": "sm_gaps",
+          "label": "Which businesses are short on usable media? What do you need filmed?",
+          "type": "text"
+        },
+        {
+          "id": "sm_ads",
+          "label": "Checked that the Meta ads are running (no rejected ads, no paused campaigns)",
+          "type": "check"
+        }
+      ]
+    },
+    {
+      "title": "Results",
+      "items": [
+        {
+          "id": "sm_top",
+          "label": "Top-performing post of the week (business, platform, why it worked)",
+          "type": "text"
+        },
+        {
+          "id": "sm_flop",
+          "label": "Biggest flop and what you'd change",
+          "type": "text"
+        },
+        {
+          "id": "sm_followers",
+          "label": "Net new followers across all accounts (rough total)",
+          "type": "number",
+          "unit": "followers"
+        },
+        {
+          "id": "sm_needs",
+          "label": "What do you need from Sloan to do this job better next week?",
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}

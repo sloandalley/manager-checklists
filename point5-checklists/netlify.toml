@@ -1,0 +1,17 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+# The two scheduled jobs are configured inside their files (export const config = { schedule }).
+# Times are UTC:  send-checklists  0 13 * * 0  = Sundays 7:00am Mountain (MDT)
+#                 send-reminders   0 15 * * 1  = Mondays 9:00am Mountain (MDT)
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "no-referrer"
